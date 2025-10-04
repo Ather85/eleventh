@@ -24,7 +24,7 @@ app.add_middleware(
 )
 
 # Load CSV data once at startup
-df = pd.read_csv("students.csv")  # CSV has columns studentId,class
+df = pd.read_csv("q-fastapi.csv")  # CSV has columns studentId,class
 
 @app.get("/api")
 async def get_students(class_: Optional[List[str]] = Query(None, alias="class")):
